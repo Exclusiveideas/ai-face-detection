@@ -11,7 +11,7 @@ function App() {
 
     videoRef && loadModels();
 
-  }, [])
+  }, []);
   
     const loadModels = () => {
       Promise.all([
@@ -20,9 +20,9 @@ function App() {
         faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
         faceapi.nets.faceExpressionNet.loadFromUri('/models'),
       ]).then(() => {
-        handleVideo();
+        faceDetection();
       })
-    }
+    };
 
   const startVideo = () => {
     navigator.mediaDevices.getUserMedia({ video: true })
@@ -34,7 +34,7 @@ function App() {
       });
   }
 
-  const handleVideo = async () => {
+  const faceDetection = async () => {
     setInterval(async() => {
       const detections = await faceapi.detectAllFaces(videoRef.current, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions();
       
@@ -49,7 +49,6 @@ function App() {
         height: 650,
       });
 
-      // canvasRef.getContext("2d").clearRect(0, 0, canvasRef.width, canvasRef.height)
       faceapi.draw.drawDetections(canvasRef.current, resized)
       faceapi.draw.drawFaceLandmarks(canvasRef.current, resized)
       faceapi.draw.drawFaceExpressions(canvasRef.current, resized)
@@ -58,12 +57,12 @@ function App() {
   }
 
   return (
-    <div style={{ display: 'flex', width: '100vw', height: '100vh', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between'}} className="App">
-      <h1>FACE API DETECTION</h1>
-      <div style={{display: 'flex',  alignItems: 'center', flexDirection: 'column'}}>
-        <video crossOrigin='anonymous' ref={videoRef} id="video" autoPlay ></video>
+    <div  className="app">
+      <h1> AI FACE DETECTION</h1>
+      <div className='app__video'>
+        <video crossOrigin='anonymous' ref={videoRef} autoPlay ></video>
       </div>
-        <canvas ref={canvasRef} width="940" height="650" style={{ position: 'absolute', top: '100px'}} />
+        <canvas ref={canvasRef} width="940" height="650" className='app__canvas' />
       
     </div>
   );
