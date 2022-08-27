@@ -1,6 +1,8 @@
 # AI-FACE DETECTION
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Brief Intro
+
+AI face detection is a react app which track the user's face as well as displays a list of possible fcaial expression based on high probability using face-api.js library.
 
 ## Available Scripts
 
