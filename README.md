@@ -1,25 +1,33 @@
 # AI-FACE DETECTION
 
-## Brief Intro
+### Brief Intro
 
-AI face detection is a react app which track the user's face as well as displays a list of possible fcaial expression based on high probability using face-api.js library.
+AI face detection is a web app which track the user's face and displays a list of possible fcaial expression based on high probability using the face-api.js library.
 
-## Available Scripts
+### STACK
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://github.com/Exclusiveideas)
 
-In the project directory, you can run:
 
-### `npm start`
+### Installation Steps 
+**1. First clone the project by running** <br />
+   ``` git clone https://github.com/<your-username>/ai-face-detection.git ```
+<br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**2. Go into the project directory**  <br />
+   ``` cd ai-face-detection ``` 
+   <br />
+   
+**3. Install all the required dependencies** <br />
+    ``` npm i ``` 
+    <br />
+    
+**4. Start the application development server**<br />
+    ``` npm start ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br /> 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**The app is now running**
+<br />
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Don't forget to star this repository✨✨.
