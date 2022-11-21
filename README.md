@@ -10,7 +10,7 @@ AI face detection is a web app which track the user's face and displays a list o
 
 ### Installation Steps 
 **1. First clone the project by running** <br />
-   ``` git clone https://github.com/<your-username>/ai-face-detection.git ```
+   ``` git clone https://github.com/Exclusiveideas/ai-face-detection.git ```
 <br />
 
 **2. Go into the project directory**  <br />
